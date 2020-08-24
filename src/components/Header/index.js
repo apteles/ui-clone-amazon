@@ -2,17 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { IoMdBasket } from "react-icons/io";
-import ConnectContext from "../../context/modules/cart/connectContext";
+import ConnectContext from "../../context/modules/connectContext";
 import * as S from "./styles";
 
 const Header = ({ context }) => {
   const { state } = context;
   return (
     <S.Container>
-      <S.Logo
-        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        alt="Logotipo amazon"
-      />
+      <Link to="/">
+        <S.Logo
+          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="Logotipo amazon"
+        />
+      </Link>
+     
       <S.SearchForm>
         <input placeholder="Pesquisar em Amazon.com.br" />
         <button>
@@ -23,9 +26,9 @@ const Header = ({ context }) => {
         <ul>
           <li>
             <Link to="/login">
-              <span>Hello, Guest</span>
+              <span>Hello, {state.auth.user.email}</span>
               <br />
-              <span>Sign In</span>
+              <span> {state.auth.user.email !== 'johndoe@domain.com' ? 'Sign Out' : 'Sign In'} </span>
             </Link>
           </li>
           <li>
@@ -44,11 +47,11 @@ const Header = ({ context }) => {
           </li>
 
           <li>
-            <Link to="/login">
+            <Link to="/cart">
               <S.ShoppingBasket>
                 <IoMdBasket />
 
-                <span>{state.basket.length}</span>
+                <span>{state.cart.basket.length}</span>
               </S.ShoppingBasket>
             </Link>
           </li>

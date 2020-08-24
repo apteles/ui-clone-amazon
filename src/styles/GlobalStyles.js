@@ -1,10 +1,13 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+html {
+    font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem*/
 }
 :root{
   --primary-color:#232F3E;
@@ -24,4 +27,4 @@ export default createGlobalStyle`
   body{
     background: #EAEDED;
   }
-`
+`;

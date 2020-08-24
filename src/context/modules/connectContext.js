@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Context } from "./index";
+import { Context } from "../modules/rootContext";
 
 export default function (Component) {
   return (props) => {

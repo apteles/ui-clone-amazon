@@ -1,49 +1,51 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-  flex: 1 1 250px;
-  
+  max-width: 34rem;
+  flex: 0 1 34rem;
+  width: 100%;
+  margin: 1rem;
+  padding: 1.5rem;
+  height: 50rem;
+  box-shadow: 0px 10px 15px #1b1c2029;
+  border-radius: 3px;
+  background: #fff;
+`;
+
+export const ProductItem = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+`;
+export const Image = styled.img`
+  /* padding-left: 1.5rem; */
 
-  height: 420px;
-  margin: 10px;
-  background: #fff;
-  padding: 20px;
-  > img{
-    width: 100%;
-    max-height: 230px;
-    object-fit: contain;
-    margin-bottom: 20px;
-  }
-  > button{
-    border-radius: 3px;
-    padding: 7px 12px;
-    background: var(--secondary-color);
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background ease 500ms;
-
-    &:hover{
-      background: #db8e30;
-    }
-  }
-
+  max-height: 34rem;
+  width: 100%;
+  /* max-height: 230px; */
+  object-fit: contain;
+  margin-bottom: 20px;
 `;
 
-export const ProductInfo = styled.div`
-`;
+export const Name = styled.div`
+  padding-left: 1.5rem;
 
+  font-size: 1.5rem;
+  font-weight: 600;
+`;
+export const Brand = styled.div`
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #808080;
+`;
 export const Price = styled.div`
+  padding-left: 1.5rem;
+
+  font-size: 2.5rem;
 `;
-
-
-export const Title = styled.div`
-
-
-`;
-
 export const Rating = styled.div`
-
-
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 `;

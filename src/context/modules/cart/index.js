@@ -1,13 +1,8 @@
-import createContext from "../../createContext";
-import reducer from "./reducers";
-import * as Actions from "./actions";
+import cartReducer from "./reducers";
+import * as cartActions from "./actions";
 
-const INITIAL_STATE = {
+const CART_STATE = {
   basket: [],
 };
 
-export const { Provider, Context } = createContext(
-  reducer,
-  { ...Actions },
-  INITIAL_STATE
-);
+export { cartReducer, cartActions, CART_STATE };

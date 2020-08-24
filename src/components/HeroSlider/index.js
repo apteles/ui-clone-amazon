@@ -19,27 +19,27 @@ const images = [
   },
 ];
 
-const settings = {
-  dots: true,
-  arrows: true,
-  slidesToShow: 2,
-  infinite: false,
-  speed: 500,
-  rows: 2,
-  slidesPerRow: 1,
-  slidesToScroll: 2,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        rows: 2,
-        slidesPerRow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+// const settings = {
+//   dots: true,
+//   arrows: true,
+//   slidesToShow: 2,
+//   infinite: false,
+//   speed: 500,
+//   rows: 2,
+//   slidesPerRow: 1,
+//   slidesToScroll: 2,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 1,
+//         rows: 2,
+//         slidesPerRow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//   ],
+// };
 
 const HeroSlider = () => {
   return (
